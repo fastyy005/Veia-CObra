@@ -1,9 +1,9 @@
-function mostrarPergunta() {
-  document.getElementById("inicio").classList.add("hidden");
-  document.getElementById("pergunta").classList.remove("hidden");
-}
-
 function mostrarVideo() {
   document.getElementById("pergunta").classList.add("hidden");
-  document.getElementById("videoTela").classList.remove("hidden");
+  const videoTela = document.getElementById("videoTela");
+  videoTela.classList.remove("hidden");
+  
+  // Isso garante que o vídeo comece a tocar após o clique
+  const video = videoTela.querySelector("video");
+  video.play();
 }
